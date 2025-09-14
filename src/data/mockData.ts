@@ -10,7 +10,7 @@ export const mockUsers: User[] = [
     photos: [
       {
         id: '1',
-        url: 'https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=800',
+        url: 'public/Photo_01.PNG',
         caption: '今日は雲の上まで飛べました！最高の眺めです 🌤️',
         timestamp: '2024-01-15T14:30:00Z',
         likes: 24,
