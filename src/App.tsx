@@ -58,7 +58,6 @@ const theme = createTheme({
 });
 
 const tabConfig = [
-  //{ label: 'Map', icon: <Map />, component: MapView },
   { label: 'Community', icon: <Group />, component: CommunityView },
   { label: 'Photo', icon: <Photo />, component: PhotoView },
   { label: 'Flight log', icon: <Flight />, component: FlightLogView },
