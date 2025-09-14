@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { CssBaseline, Box, BottomNavigation, BottomNavigationAction, AppBar, Toolbar, Typography } from '@mui/material';
-import { Map, Group, Photo, Flight, Person } from '@mui/icons-material';
-import MapView from './components/MapView';
+import { Group, Photo, Flight, Person } from '@mui/icons-material';
+//import MapView from './components/MapView';
 import CommunityView from './components/CommunityView';
 import PhotoView from './components/PhotoView';
 import FlightLogView from './components/FlightLogView';
 import AccountView from './components/AccountView';
+
+//BottomNavigationAction,
 
 const theme = createTheme({
   palette: {
@@ -56,7 +58,7 @@ const theme = createTheme({
 });
 
 const tabConfig = [
-  { label: 'Map', icon: <Map />, component: MapView },
+  //{ label: 'Map', icon: <Map />, component: MapView },
   { label: 'Community', icon: <Group />, component: CommunityView },
   { label: 'Photo', icon: <Photo />, component: PhotoView },
   { label: 'Flight log', icon: <Flight />, component: FlightLogView },
