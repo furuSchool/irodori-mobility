@@ -1,17 +1,16 @@
-import { User, FlightLog, FlightSummary, WingRental,Photo } from '../types';
+import { User, FlightLog, FlightSummary, WingRental, Photo } from '../types';
 
 export const mockUsers: User[] = [
-  // 既存のユーザー
   {
     id: '1',
     name: 'Sky Walker',
     avatar: 'https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=150',
-    location: { lat: 35.1715, lng: 136.8821 }, // 名古屋駅周辺
+    location: { lat: 35.1715, lng: 136.8821 },
     isOnline: true,
     photos: [
       {
         id: 'photo1',
-        url: 'https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg?auto=compress&cs=tinysrgb&w=800',
+        url: '/Photo_01.PNG',
         caption: '今日は雲の上まで飛べました！最高の眺めです 🌤️',
         timestamp: '2025-09-15T14:30:00Z',
         likes: 24,
@@ -23,7 +22,7 @@ export const mockUsers: User[] = [
     id: '2',
     name: 'Cloud Rider',
     avatar: 'https://images.pexels.com/photos/1139743/pexels-photo-1139743.jpeg?auto=compress&cs=tinysrgb&w=150',
-    location: { lat: 35.1701, lng: 136.8805 }, // 名古屋駅周辺
+    location: { lat: 35.1701, lng: 136.8805 },
     isOnline: true,
     photos: [
       {
@@ -40,7 +39,7 @@ export const mockUsers: User[] = [
     id: '3',
     name: 'Wind Dancer',
     avatar: 'https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&w=150',
-    location: { lat: 35.1728, lng: 136.8799 }, // 名古屋駅周辺
+    location: { lat: 35.1728, lng: 136.8799 },
     isOnline: false,
     photos: [
       {
@@ -53,7 +52,6 @@ export const mockUsers: User[] = [
       }
     ]
   },
-  // 以下、追加のユーザーデータ
   {
     id: '4',
     name: 'Aero Ace',
@@ -84,261 +82,6 @@ export const mockUsers: User[] = [
         caption: '霧の中を突き進む感覚、最高にスリリング！',
         timestamp: '2025-09-14T08:15:00Z',
         likes: 39,
-        comments: []
-      }
-    ]
-  },
-  {
-    id: '6',
-    name: 'Summit Soarer',
-    avatar: 'https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=150',
-    location: { lat: 35.1689, lng: 136.8788 },
-    isOnline: true,
-    photos: [
-      {
-        id: 'photo6',
-        url: 'https://images.pexels.com/photos/3225528/pexels-photo-3225528.jpeg?auto=compress&cs=tinysrgb&w=800',
-        caption: '南国の島の上をフライト！海の色が信じられないくらい綺麗でした。',
-        timestamp: '2025-09-13T16:50:00Z',
-        likes: 62,
-        comments: []
-      }
-    ]
-  },
-  {
-    id: '7',
-    name: 'Feather Fin',
-    avatar: 'https://images.pexels.com/photos/1559486/pexels-photo-1559486.jpeg?auto=compress&cs=tinysrgb&w=150',
-    location: { lat: 35.1722, lng: 136.8845 },
-    isOnline: true,
-    photos: [
-      {
-        id: 'photo7',
-        url: 'https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&w=800',
-        caption: '夜景フライトは格別。街の光が宝石箱みたい 💎',
-        timestamp: '2025-09-13T20:30:00Z',
-        likes: 78,
-        comments: []
-      }
-    ]
-  },
-  {
-    id: '8',
-    name: 'Airborne Artist',
-    avatar: 'https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=150',
-    location: { lat: 35.1708, lng: 136.8779 },
-    isOnline: false,
-    photos: [
-      {
-        id: 'photo8',
-        url: 'https://images.pexels.com/photos/15286/pexels-photo.jpeg?auto=compress&cs=tinysrgb&w=800',
-        caption: '森の息吹を感じながら。自然と一体になれた瞬間。',
-        timestamp: '2025-09-12T13:00:00Z',
-        likes: 51,
-        comments: []
-      }
-    ]
-  },
-  {
-    id: '9',
-    name: 'Vortex Voyager',
-    avatar: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150',
-    location: { lat: 35.1740, lng: 136.8828 },
-    isOnline: true,
-    photos: [
-      {
-        id: 'photo9',
-        url: 'https://images.pexels.com/photos/2088205/pexels-photo-2088205.jpeg?auto=compress&cs=tinysrgb&w=800',
-        caption: '渓谷を駆け抜けるスリル！翼が風を切る音が心地いい。',
-        timestamp: '2025-09-12T15:25:00Z',
-        likes: 48,
-        comments: []
-      }
-    ]
-  },
-  {
-    id: '10',
-    name: 'Cirrus Strider',
-    avatar: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150',
-    location: { lat: 35.1681, lng: 136.8819 },
-    isOnline: false,
-    photos: [
-      {
-        id: 'photo10',
-        url: 'https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=800',
-        caption: 'オーロラと一緒に飛ぶ夢が叶いました…！言葉にならない。',
-        timestamp: '2025-09-11T23:50:00Z',
-        likes: 120,
-        comments: []
-      }
-    ]
-  },
-  {
-    id: '11',
-    name: 'Sky Captain',
-    avatar: 'https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&w=150',
-    location: { lat: 35.1752, lng: 136.8803 },
-    isOnline: true,
-    photos: [
-      {
-        id: 'photo11',
-        url: 'https://images.pexels.com/photos/1581373/pexels-photo-1581373.jpeg?auto=compress&cs=tinysrgb&w=800',
-        caption: '雨上がりの虹を追いかけて。ラッキーなフライトでした 🌈',
-        timestamp: '2025-09-11T16:00:00Z',
-        likes: 55,
-        comments: []
-      }
-    ]
-  },
-  {
-    id: '12',
-    name: 'Nimbus Nomad',
-    avatar: 'https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=150',
-    location: { lat: 35.1699, lng: 136.8851 },
-    isOnline: false,
-    photos: [
-      {
-        id: 'photo12',
-        url: 'https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpeg?auto=compress&cs=tinysrgb&w=800',
-        caption: '夕焼けに染まる雲が、まるで炎の海のようだった。',
-        timestamp: '2025-09-10T18:10:00Z',
-        likes: 88,
-        comments: []
-      }
-    ]
-  },
-  {
-    id: '13',
-    name: 'Atmos Explorer',
-    avatar: 'https://images.pexels.com/photos/1499327/pexels-photo-1499327.jpeg?auto=compress&cs=tinysrgb&w=150',
-    location: { lat: 35.1725, lng: 136.8781 },
-    isOnline: true,
-    photos: [
-      {
-        id: 'photo13',
-        url: 'https://images.pexels.com/photos/461940/pexels-photo-461940.jpeg?auto=compress&cs=tinysrgb&w=800',
-        caption: '雪山の頂上からダイブ！空気が澄んでて気持ちいい！',
-        timestamp: '2025-09-10T10:45:00Z',
-        likes: 67,
-        comments: []
-      }
-    ]
-  },
-  {
-    id: '14',
-    name: 'Gale Runner',
-    avatar: 'https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=150',
-    location: { lat: 35.1703, lng: 136.8839 },
-    isOnline: true,
-    photos: [
-      {
-        id: 'photo14',
-        url: 'https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=800',
-        caption: '湖の上を低空飛行。水面に自分の影が映って不思議な感じ。',
-        timestamp: '2025-09-09T14:00:00Z',
-        likes: 41,
-        comments: []
-      }
-    ]
-  },
-  {
-    id: '15',
-    name: 'Helios Hawk',
-    avatar: 'https://images.pexels.com/photos/713520/pexels-photo-713520.jpeg?auto=compress&cs=tinysrgb&w=150',
-    location: { lat: 35.1718, lng: 136.8795 },
-    isOnline: false,
-    photos: [
-      {
-        id: 'photo15',
-        url: 'https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&w=800',
-        caption: '天の川フライト。満点の星空に包まれて感動… 🌌',
-        timestamp: '2025-09-09T01:30:00Z',
-        likes: 95,
-        comments: []
-      }
-    ]
-  },
-  {
-    id: '16',
-    name: 'Zephyr Zenith',
-    avatar: 'https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg?auto=compress&cs=tinysrgb&w=150',
-    location: { lat: 35.1736, lng: 136.8823 },
-    isOnline: true,
-    photos: [
-      {
-        id: 'photo16',
-        url: 'https://images.pexels.com/photos/2258536/pexels-photo-2258536.jpeg?auto=compress&cs=tinysrgb&w=800',
-        caption: 'どこまでも続くハイウェイ。車より速いって最高！',
-        timestamp: '2025-09-08T12:00:00Z',
-        likes: 33,
-        comments: []
-      }
-    ]
-  },
-  {
-    id: '17',
-    name: 'Cloudpiercer',
-    avatar: 'https://images.pexels.com/photos/428364/pexels-photo-428364.jpeg?auto=compress&cs=tinysrgb&w=150',
-    location: { lat: 35.1685, lng: 136.8808 },
-    isOnline: false,
-    photos: [
-      {
-        id: 'photo17',
-        url: 'https://images.pexels.com/photos/1102915/pexels-photo-1102915.jpeg?auto=compress&cs=tinysrgb&w=800',
-        caption: '雷雲を遠くに眺めながら。自然の力はすごい。',
-        timestamp: '2025-09-08T17:15:00Z',
-        likes: 58,
-        comments: []
-      }
-    ]
-  },
-  {
-    id: '18',
-    name: 'Strato Sprinter',
-    avatar: 'https://images.pexels.com/photos/1462637/pexels-photo-1462637.jpeg?auto=compress&cs=tinysrgb&w=150',
-    location: { lat: 35.1729, lng: 136.8836 },
-    isOnline: true,
-    photos: [
-      {
-        id: 'photo18',
-        url: 'https://images.pexels.com/photos/2440061/pexels-photo-2440061.jpeg?auto=compress&cs=tinysrgb&w=800',
-        caption: 'カラフルな街並みの上を散歩。楽しいフライトでした！',
-        timestamp: '2025-09-07T13:40:00Z',
-        likes: 49,
-        comments: []
-      }
-    ]
-  },
-  {
-    id: '19',
-    name: 'Tempest Tamer',
-    avatar: 'https://images.pexels.com/photos/372042/pexels-photo-372042.jpeg?auto=compress&cs=tinysrgb&w=150',
-    location: { lat: 35.1706, lng: 136.8792 },
-    isOnline: true,
-    photos: [
-      {
-        id: 'photo19',
-        url: 'https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=800',
-        caption: '山の夜明け。太陽が昇る瞬間の神々しさは忘れられない。',
-        timestamp: '2025-09-07T05:50:00Z',
-        likes: 72,
-        comments: []
-      }
-    ]
-  },
-  {
-    id: '20',
-    name: 'Horizon Hopper',
-    avatar: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=150',
-    location: { lat: 35.1711, lng: 136.8811 },
-    isOnline: false,
-    photos: [
-      {
-        id: 'photo20',
-        url: 'https://images.pexels.com/photos/247851/pexels-photo-247851.jpeg?auto=compress&cs=tinysrgb&w=800',
-        caption: '砂漠の上をどこまでも。地平線が丸く見えた！',
-        timestamp: '2025-09-06T11:20:00Z',
-        likes: 65,
         comments: []
       }
     ]
@@ -479,7 +222,7 @@ export const myPhotos: Photo[] = [
   {
     id: 'my17',
     url: 'https://images.pexels.com/photos/2885320/pexels-photo-2885320.jpeg?auto=compress&cs=tinysrgb&w=800',
-      caption: '入道雲の中はどんな感じかなって思ったけど、やめておきました。',
+    caption: '入道雲の中はどんな感じかなって思ったけど、やめておきました。',
     timestamp: '2025-09-07T15:00:00Z',
     likes: 50,
     comments: []
