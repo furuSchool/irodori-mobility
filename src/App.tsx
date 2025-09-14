@@ -82,7 +82,7 @@ function App() {
             <Toolbar>
             <img src="/logo.PNG" alt="Logo" style={{ height: 32, marginRight: 12 }} />
             <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontWeight: 600 }}>
-              Sky Community
+              イロドリ WING Communication
             </Typography>
             </Toolbar>
         </AppBar>
