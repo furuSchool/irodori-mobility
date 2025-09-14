@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
-import { Box, Card, CardMedia, CardContent, Avatar, Typography, IconButton, Divider } from '@mui/material';
+import { Box, Card, CardMedia, CardContent, Avatar, Typography, IconButton, Divider, Pagination } from '@mui/material';
 import { Download, Favorite, Comment } from '@mui/icons-material';
 import { mockUsers, myPhotos } from '../data/mockData';
 
 const PhotoView: React.FC = () => {
   const [likedPhotos, setLikedPhotos] = useState<Set<string>>(new Set());
+  // ページングのためのstateを追加
+  const [myPhotosPage, setMyPhotosPage] = useState(1);
+  const [friendsPhotosPage, setFriendsPhotosPage] = useState(1);
+
+  // 1ページあたりの表示件数
+  const ITEMS_PER_PAGE = 5;
 
   const handleLike = (photoId: string) => {
     const newLikedPhotos = new Set(likedPhotos);
@@ -26,6 +32,7 @@ const PhotoView: React.FC = () => {
     document.body.removeChild(link);
   };
 
+  // PhotoCardコンポーネントは変更なし
   const PhotoCard = ({ photo, user, isMyPhoto = false }: { 
     photo: any, 
     user?: any, 
@@ -105,29 +112,71 @@ const PhotoView: React.FC = () => {
     </Card>
   );
 
+  // --- 表示データの計算ロジック ---
+
+  // 1. あなたの写真のページング処理
+  const myPhotosTotalPages = Math.ceil(myPhotos.length / ITEMS_PER_PAGE);
+  const displayedMyPhotos = myPhotos.slice(
+    (myPhotosPage - 1) * ITEMS_PER_PAGE,
+    myPhotosPage * ITEMS_PER_PAGE
+  );
+
+  // 2. フレンドの写真のページング処理
+  // まず、全フレンドの写真を1つの配列にまとめる
+  const allFriendsPhotos = mockUsers.flatMap(user => 
+    user.photos.map(photo => ({ photo, user }))
+  );
+  const friendsPhotosTotalPages = Math.ceil(allFriendsPhotos.length / ITEMS_PER_PAGE);
+  const displayedFriendsPhotos = allFriendsPhotos.slice(
+    (friendsPhotosPage - 1) * ITEMS_PER_PAGE,
+    friendsPhotosPage * ITEMS_PER_PAGE
+  );
+
+
   return (
     <Box sx={{ p: 2, maxWidth: 600, mx: 'auto' }}>
-      {/* 自分の写真セクション */}
-      <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold', color: 'primary.main' }}>
-        あなたの空中写真
-      </Typography>
-      
-      {myPhotos.map((photo) => (
-        <PhotoCard key={photo.id} photo={photo} isMyPhoto />
-      ))}
-      
-      <Divider sx={{ my: 3 }} />
-      
       {/* フレンドの写真セクション */}
       <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold', color: 'primary.main' }}>
         フレンドの空中写真
       </Typography>
       
-      {mockUsers.flatMap(user => 
-        user.photos.map(photo => (
-          <PhotoCard key={photo.id} photo={photo} user={user} />
-        ))
+      {displayedFriendsPhotos.map(({ photo, user }) => (
+        <PhotoCard key={photo.id} photo={photo} user={user} />
+      ))}
+
+      {/* フレンドの写真用ページネーション */}
+      {allFriendsPhotos.length > ITEMS_PER_PAGE && (
+        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+          <Pagination
+            count={friendsPhotosTotalPages}
+            page={friendsPhotosPage}
+            onChange={(event, value) => setFriendsPhotosPage(value)}
+            color="primary"
+          />
+        </Box>
       )}
+      {/* 自分の写真セクション */}
+      <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold', color: 'primary.main' }}>
+        あなたの空中写真
+      </Typography>
+      
+      {displayedMyPhotos.map((photo) => (
+        <PhotoCard key={photo.id} photo={photo} isMyPhoto />
+      ))}
+      
+      {/* 自分の写真用ページネーション */}
+      {myPhotos.length > ITEMS_PER_PAGE && (
+        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+          <Pagination
+            count={myPhotosTotalPages}
+            page={myPhotosPage}
+            onChange={(event, value) => setMyPhotosPage(value)}
+            color="primary"
+          />
+        </Box>
+      )}
+      
+      <Divider sx={{ my: 3 }} />
     </Box>
   );
 };

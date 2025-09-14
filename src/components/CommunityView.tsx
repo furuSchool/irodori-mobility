@@ -42,8 +42,8 @@ const CommunityView: React.FC = () => {
       </style>
       
       <MapContainer
-        center={[35.6762, 139.6503]}
-        zoom={13}
+        center={[35.171278960483285, 136.88074296590105]}
+        zoom={16}
         style={{ height: '100%', width: '100%' }}
       >
         <TileLayer
