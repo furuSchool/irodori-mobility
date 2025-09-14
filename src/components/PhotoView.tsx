@@ -34,8 +34,8 @@ const PhotoView: React.FC = () => {
 
   // PhotoCardコンポーネントは変更なし
   const PhotoCard = ({ photo, user, isMyPhoto = false }: { 
-    photo: any, 
-    user?: any, 
+    photo: import('../types').Photo, 
+    user?: import('../types').User, 
     isMyPhoto?: boolean 
   }) => (
     <Card sx={{ mb: 2, borderRadius: 2, overflow: 'hidden' }}>
