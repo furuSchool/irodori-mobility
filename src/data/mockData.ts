@@ -1,4 +1,4 @@
-import { User, FlightLog, FlightSummary, WingRental } from '../types';
+import { User, FlightLog, FlightSummary, WingRental,Photo } from '../types';
 
 export const mockUsers: User[] = [
   // 既存のユーザー

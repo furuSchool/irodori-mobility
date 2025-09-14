@@ -80,7 +80,7 @@ function App() {
         {/* Header */}
         <AppBar position="static" elevation={2}>
           <Toolbar>
-            <Flight sx={{ mr: 1 }} />
+            <img src="public/logo.png" alt="Logo" style={{ width: 32, height: 32, marginRight: 8 }} />
             <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontWeight: 600 }}>
               Sky Community
             </Typography>
