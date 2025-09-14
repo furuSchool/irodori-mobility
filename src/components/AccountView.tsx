@@ -50,7 +50,7 @@ const AccountView: React.FC = () => {
           <Box sx={{ display: 'flex', justifyContent: 'space-around', textAlign: 'center' }}>
             <Box>
               <Avatar 
-              src="/logo.PNG" 
+              src="/logo_02.PNG" 
               sx={{ 
                 width: 32, 
                 height: 32, 
