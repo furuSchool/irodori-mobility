@@ -92,7 +92,7 @@ export const myPhotos: Photo[] = [
   // 既存の写真
   {
     id: 'my1',
-    url: 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: 'public/sky_01.png',
     caption: '今朝の飛行から。朝日が雲海を照らす瞬間を捉えました。',
     timestamp: '2025-09-16T06:30:00Z',
     likes: 42,
@@ -100,7 +100,7 @@ export const myPhotos: Photo[] = [
   },
   {
     id: 'my2',
-    url: 'https://images.pexels.com/photos/1154510/pexels-photo-1154510.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: 'public/sky_02.jpg',
     caption: '友達と一緒に編隊飛行！チームワークが重要です。',
     timestamp: '2025-09-15T15:20:00Z',
     likes: 28,
@@ -109,7 +109,7 @@ export const myPhotos: Photo[] = [
   // 以下、追加の写真データ
   {
     id: 'my3',
-    url: 'https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: 'public/sky_03.jpg',
     caption: 'JRセントラルタワーズのすぐそばを飛んでみた。すごい迫力！',
     timestamp: '2025-09-15T11:00:00Z',
     likes: 58,
@@ -117,7 +117,7 @@ export const myPhotos: Photo[] = [
   },
   {
     id: 'my4',
-    url: 'https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: 'public/sky_04.jpg',
     caption: '今日の夕焼けは本当に綺麗だった。翼を休めてしばらく眺めてた。',
     timestamp: '2025-09-14T18:30:00Z',
     likes: 76,
@@ -125,7 +125,7 @@ export const myPhotos: Photo[] = [
   },
   {
     id: 'my5',
-    url: 'https://images.pexels.com/photos/911738/pexels-photo-911738.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: 'public/sky_05.jpg',
     caption: '静かな夜のフライト。星がいつもより近く感じたな。',
     timestamp: '2025-09-14T22:15:00Z',
     likes: 64,
