@@ -4,7 +4,7 @@ export const mockUsers: User[] = [
   {
     id: '1',
     name: 'Sky Walker',
-    avatar: 'https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=150',
+    avatar: 'public/06.jpg',
     location: { lat: 35.1715, lng: 136.8821 },
     isOnline: true,
     photos: [
@@ -21,13 +21,13 @@ export const mockUsers: User[] = [
   {
     id: '2',
     name: 'Cloud Rider',
-    avatar: 'https://images.pexels.com/photos/1139743/pexels-photo-1139743.jpeg?auto=compress&cs=tinysrgb&w=150',
+    avatar: '07.jpg',
     location: { lat: 35.1701, lng: 136.8805 },
     isOnline: true,
     photos: [
       {
         id: 'photo2',
-        url: 'https://images.pexels.com/photos/1054218/pexels-photo-1054218.jpeg?auto=compress&cs=tinysrgb&w=800',
+        url: 'public/photo_02.jpg',
         caption: '夕日と一緒に飛ぶのは本当に幻想的でした ✨',
         timestamp: '2025-09-15T17:45:00Z',
         likes: 18,
@@ -38,7 +38,7 @@ export const mockUsers: User[] = [
   {
     id: '3',
     name: 'Wind Dancer',
-    avatar: 'https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&w=150',
+    avatar: 'public/08.jpg',
     location: { lat: 35.1728, lng: 136.8799 },
     isOnline: false,
     photos: [
@@ -55,7 +55,7 @@ export const mockUsers: User[] = [
   {
     id: '4',
     name: 'Aero Ace',
-    avatar: 'https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?auto=compress&cs=tinysrgb&w=150',
+    avatar: 'public/09.jpg',
     location: { lat: 35.1695, lng: 136.8832 },
     isOnline: true,
     photos: [
@@ -72,7 +72,7 @@ export const mockUsers: User[] = [
   {
     id: '5',
     name: 'Glide Master',
-    avatar: 'https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=150',
+    avatar: 'public/10.jpg',
     location: { lat: 35.1731, lng: 136.8814 },
     isOnline: false,
     photos: [
