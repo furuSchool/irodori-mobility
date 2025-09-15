@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography, Card, CardContent, Avatar, Button, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
-import { Settings, Notifications, Help, ExitToApp, Person, Flight, Photo } from '@mui/icons-material';
+import { Settings, Notifications, Help, ExitToApp, Person, Photo } from '@mui/icons-material';
 
 const AccountView: React.FC = () => {
   const handleMenuClick = (item: string) => {
@@ -49,7 +49,17 @@ const AccountView: React.FC = () => {
           </Typography>
           <Box sx={{ display: 'flex', justifyContent: 'space-around', textAlign: 'center' }}>
             <Box>
-              <Flight color="primary" sx={{ mb: 1 }} />
+              <Avatar 
+              src="/logo_02.PNG" 
+              sx={{ 
+                width: 32, 
+                height: 32, 
+                mb: 1, 
+                mx: 'auto', 
+                bgcolor: 'transparent' 
+              }} 
+              variant="rounded"
+              />
               <Typography variant="h6" fontWeight="bold">47</Typography>
               <Typography variant="caption" color="text.secondary">総飛行回数</Typography>
             </Box>

@@ -79,12 +79,12 @@ function App() {
       }}>
         {/* Header */}
         <AppBar position="static" elevation={2}>
-          <Toolbar>
-            <Flight sx={{ mr: 1 }} />
+            <Toolbar>
+            <img src="/logo.PNG" alt="Logo" style={{ height: 32, marginRight: 12 }} />
             <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontWeight: 600 }}>
-              Sky Community
+              イロドリ WING Communication
             </Typography>
-          </Toolbar>
+            </Toolbar>
         </AppBar>
 
         {/* Main Content */}
